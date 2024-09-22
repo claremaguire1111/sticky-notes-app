@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%; /* Ensures full height */
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f5f7fa,
+    #c3cfe2
+  ); /* Soft gradient background */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+  justify-content: center;
+  flex-grow: 1; /* Ensures it takes up the remaining space */
+}
+
+.app-header__title {
+  margin: 20px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: #333;
+}
+
+.app-header__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+
+.search,
+.add-new {
+  font-size: 14px;
+  padding: 10px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 300px;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-new {
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient button */
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.add-new:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb); /* Hover effect */
+}
+
+.note {
+  font-family: "Permanent Marker", cursive;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background: linear-gradient(
+    135deg,
+    #fff1eb,
+    #ace0f9
+  ); /* Gradient background */
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border-radius: 15px; /* Rounder corners */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease; /* Animation */
+}
+
+.note:hover {
+  transform: translateY(-5px); /* Hover lift effect */
+}
+
+.note__title,
+.note__description {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+}
+
+.note__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.note__description {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #555;
+}
+
+.note__delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+  color: #a777e3; /* Soft color for delete icon */
+  padding: 5px;
+  transition: color 0.2s ease;
+}
+
+.note__delete:hover {
+  color: #6e8efb; /* Change color on hover */
+  cursor: pointer;
+}
